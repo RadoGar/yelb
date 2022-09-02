@@ -20,6 +20,9 @@ Resources:
       - AttributeName: "name"
         KeyType: "HASH"          
       BillingMode: PAY_PER_REQUEST
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: True
+
 
   yelbddbcache: 
     Type: AWS::DynamoDB::Table
@@ -211,6 +214,9 @@ Resources:
             Ref: yelbddbrestaurants
           awsregion: 
             Ref: AWS::Region
+          access_key: "AKIAIOSFODNN7EXAMPLE"
+          secret_key: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+
       Events:
         getVotes:
           Type: Api
