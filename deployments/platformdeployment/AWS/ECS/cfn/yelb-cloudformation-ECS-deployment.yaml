@@ -156,7 +156,9 @@ Resources:
                   Image: mreferre/yelb-appserver:0.5
                   Environment: 
                     - Name: SEARCH_DOMAIN
-                      Value: !Ref 'Domain' 
+                      Value: !Ref 'Domain'
+                       
+
                   LogConfiguration:
                     LogDriver: awslogs
                     Options:
